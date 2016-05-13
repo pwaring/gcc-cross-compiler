@@ -26,6 +26,11 @@ if [ ! -z ${FULL_REBUILD} ]; then
   mkdir ${XC_PREFIX}
 fi
 
+# Create tarball directory if it does not already exist
+if [ ! -d ${XC_TARBALL_DIR} ]; then
+  mkdir -p ${XC_TARBALL_DIR}
+fi
+
 # Create temp directory if it does not already exist
 if [ ! -d ${XC_TMP_DIR} ]; then
   mkdir -p ${XC_TMP_DIR}
