@@ -91,35 +91,35 @@ if [ ! -z ${FULL_REBUILD} ]; then
     rm -rf ${BINUTILS_SRC_DIR}
   fi
 
-  tar -xf ${BINUTILS_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${BINUTILS_TARBALL} -C ${XC_TMP_DIR}
 
   # Linux
   if [ -d ${KERNEL_SRC_DIR} ]; then
     rm -rf ${KERNEL_SRC_DIR}
   fi
 
-  tar -xf ${KERNEL_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${KERNEL_TARBALL} -C ${XC_TMP_DIR}
 
   # glibc
   if [ -d ${GLIBC_SRC_DIR} ]; then
     rm -rf ${GLIBC_SRC_DIR}
   fi
 
-  tar -xf ${GLIBC_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${GLIBC_TARBALL} -C ${XC_TMP_DIR}
 
   # GCC
   if [ -d ${GCC_SRC_DIR} ]; then
     rm -rf ${GCC_SRC_DIR}
   fi
 
-  tar -xf ${GCC_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${GCC_TARBALL} -C ${XC_TMP_DIR}
 
   # MPFR
   if [ -d ${MPFR_SRC_DIR} ]; then
     rm -rf ${MPFR_SRC_DIR}
   fi
 
-  tar -xf ${MPFR_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${MPFR_TARBALL} -C ${XC_TMP_DIR}
   ln -s ${MPFR_SRC_DIR} ${GCC_SRC_DIR}/mpfr
 
   # MPC
@@ -127,7 +127,7 @@ if [ ! -z ${FULL_REBUILD} ]; then
     rm -rf ${MPC_SRC_DIR}
   fi
 
-  tar -xf ${MPC_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${MPC_TARBALL} -C ${XC_TMP_DIR}
   ln -s ${MPC_SRC_DIR} ${GCC_SRC_DIR}/mpc
 
   # GMP
@@ -135,7 +135,7 @@ if [ ! -z ${FULL_REBUILD} ]; then
     rm -rf ${GMP_SRC_DIR}
   fi
 
-  tar -xf ${GMP_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${GMP_TARBALL} -C ${XC_TMP_DIR}
   ln -s ${GMP_SRC_DIR} ${GCC_SRC_DIR}/gmp
 
   # ISL
@@ -143,7 +143,7 @@ if [ ! -z ${FULL_REBUILD} ]; then
     rm -rf ${ISL_SRC_DIR}
   fi
 
-  tar -xf ${ISL_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${ISL_TARBALL} -C ${XC_TMP_DIR}
   ln -s ${ISL_SRC_DIR} ${GCC_SRC_DIR}/isl
 
   # Cloog
@@ -151,7 +151,7 @@ if [ ! -z ${FULL_REBUILD} ]; then
     rm -rf ${CLOOG_SRC_DIR}
   fi
 
-  tar -xf ${CLOOG_TARBALL} -C ${XC_TMP_DIR}
+  tar -xvf ${CLOOG_TARBALL} -C ${XC_TMP_DIR}
   ln -s ${CLOOG_SRC_DIR} ${GCC_SRC_DIR}/cloog
 fi
 
