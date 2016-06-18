@@ -57,7 +57,7 @@ export GLIBC_VERSION="2.23"
 # compiler. For example, if your host has GCC 4.9.1, you can probably set
 # GCC_VERSION to the latest version of the 4.9.x series, but you should not
 # set it to 5.x.
-export GCC_VERSION=${GCC_VERSION:-"5.3.0"}
+export GCC_VERSION=${GCC_VERSION:-"5.4.0"}
 export GCC_LANGS="c,c++"
 
 export MPFR_VERSION="3.1.4"
