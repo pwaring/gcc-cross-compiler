@@ -114,6 +114,9 @@ if [ ! -z ${FULL_REBUILD} ]; then
 
   tar -xvf ${GCC_TARBALL} -C ${XC_TMP_DIR}
 
+  # Patch GCC
+  find ${XC_SRC_DIR} -type f -exec sed -i 's/struct stat64/struct stat/g' {} \;
+
   # MPFR
   if [ -d ${MPFR_SRC_DIR} ]; then
     rm -rf ${MPFR_SRC_DIR}
