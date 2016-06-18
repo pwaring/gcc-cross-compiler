@@ -18,3 +18,15 @@ This software has only been tested on x86_64 systems running a recent version of
 Linux. It will not work on Cygwin due to its lack of support for stat64 (see the
 Cygwin FAQ for full details), which is used in glibc. It does not currently work
 on OS X, as the kernel libraries will not build.
+
+## Components
+
+The following components are used when building the cross compiler:
+
+ * [GNU Binutils](https://www.gnu.org/software/binutils/)
+ * [Linux kernel](https://www.kernel.org/)
+ * [GNU C library](https://www.gnu.org/software/libc/)
+ * [GCC](https://gcc.gnu.org/)
+ * [GNU MPFR](http://www.mpfr.org/)
+ * [GNU GMP](https://gmplib.org/)
+ 
