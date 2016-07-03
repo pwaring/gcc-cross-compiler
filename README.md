@@ -1,6 +1,8 @@
 # GCC cross compiler
 
-Cross compiling GCC for a wide range of targets.
+Cross compiling GCC for a wide range of targets. This project was started to
+make the process as simple as possible, in order to help people understand
+how a cross compiler (and associated toolchain) is built.
 
 To build the toolchain, first edit any configuration options in `config.sh` and
 then run:
