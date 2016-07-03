@@ -12,6 +12,12 @@ FULL_REBUILD=1 bash ./build.sh
 The build script will start from scratch, purging any existing toolchain. Be
 sure this is what you want before you start the build process.
 
+You can also specify some options on the commandline, e.g.:
+
+```
+FULL_REBUILD=1 GCC_VERSION=4.9.2 XC_TARGET_NAME=rpi2 bash ./build.sh
+```
+
 ## Requirements
 
 This software has only been tested on x86_64 systems running a recent version of
