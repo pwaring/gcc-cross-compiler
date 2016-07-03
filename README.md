@@ -58,6 +58,11 @@ work better, offer more flexibility etc. include:
 
  * [crosstool-ng](http://crosstool-ng.org/)
 
+You may also be able to install cross compilers for certain architectures via
+your package management system. For example, on Ubuntu the
+`gcc-arm-linux-gnueabi` package will provide you with a cross compiler for 32
+bit ARM on a x86 or x86_64 host.
+
 ## Further reading
 
  * [How to Build a GCC Cross-Compiler](http://preshing.com/20141119/how-to-build-a-gcc-cross-compiler/)
