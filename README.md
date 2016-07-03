@@ -50,3 +50,15 @@ The following components are used when building the cross compiler:
  * [GCC](https://gcc.gnu.org/)
  * [GNU MPFR](http://www.mpfr.org/)
  * [GNU GMP](https://gmplib.org/)
+
+## Alternatives
+
+This is not the only GCC cross compiler project. Some alternatives which may
+work better, offer more flexibility etc. include:
+
+ * [crosstool-ng](http://crosstool-ng.org/)
+
+## Further reading
+
+ * [How to Build a GCC Cross-Compiler](http://preshing.com/20141119/how-to-build-a-gcc-cross-compiler/)
+  - Blog post which was used as the starting point for this project.
