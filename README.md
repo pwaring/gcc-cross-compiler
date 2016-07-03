@@ -65,5 +65,5 @@ bit ARM on a x86 or x86_64 host.
 
 ## Further reading
 
- * [How to Build a GCC Cross-Compiler](http://preshing.com/20141119/how-to-build-a-gcc-cross-compiler/)
-  - Blog post which was used as the starting point for this project.
+ * [How to Build a GCC Cross-Compiler](http://preshing.com/20141119/how-to-build-a-gcc-cross-compiler/):
+ Blog post which was used as the starting point for this project.
