@@ -34,6 +34,8 @@ The build script supports the following environment variables:
  5.x series. The cross compiler is more likely to build if you use a version
  close to that on the host (e.g. don't try and build a 5.x cross compiler on a
  host with GCC 4.x).
+ * `PARALLEL_BUILDS`: Maximum number of parallel builds (passed to `make` as
+   `-j ${PARALLEL_BUILDS}`). Requires GNU Make 4.0 or later.
 
 ## Requirements
 
