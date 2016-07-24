@@ -165,12 +165,12 @@ mkdir ${BINUTILS_BUILD_DIR}
 
 cd ${BINUTILS_BUILD_DIR}
 ${BINUTILS_SRC_DIR}/configure ${BINUTILS_CONFIGURE_OPTIONS[*]}
-make
+make ${PARALLEL_MAKE}
 make install
 
 # Build kernel headers (no need for separate build directory)
 cd ${KERNEL_SRC_DIR}
-make ${KERNEL_MAKE_OPTIONS[*]}
+make ${KERNEL_MAKE_OPTIONS[*]} ${PARALLEL_MAKE}
 
 # Build GCC (first pass)
 # Remove and recreate the build directory
@@ -182,7 +182,7 @@ mkdir ${GCC_BUILD_DIR}
 
 cd ${GCC_BUILD_DIR}
 ${GCC_SRC_DIR}/configure ${GCC_CONFIGURE_OPTIONS[*]}
-make all-gcc
+make all-gcc ${PARALLEL_MAKE}
 make install-gcc
 
 # Build glibc (first pass)
@@ -204,15 +204,15 @@ touch ${XC_HEADER_DIR}/include/gnu/stubs.h
 
 # Build GCC (second pass)
 cd ${GCC_BUILD_DIR}
-make all-target-libgcc
+make all-target-libgcc ${PARALLEL_MAKE}
 make install-target-libgcc
 
 # Build glibc (second pass)
 cd ${GLIBC_BUILD_DIR}
-make
+make ${PARALLEL_MAKE}
 make install
 
 # Build and install GCC (third pass)
 cd ${GCC_BUILD_DIR}
-make all
+make all ${PARALLEL_MAKE}
 make install

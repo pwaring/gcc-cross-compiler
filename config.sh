@@ -19,6 +19,14 @@ else
   export XC_KERNEL_TARGET="mips"
 fi
 
+# Parallel build options
+export PARALLEL_BUILDS=${PARALLEL_BUILDS:-}
+export PARALLEL_MAKE=""
+
+if [ ! -z ${PARALLEL_BUILDS} ]; then
+  PARALLEL_MAKE="-j ${PARALLEL_BUILDS} --output-sync"
+fi
+
 # Prefix to use for downloading and building the toolchain, as well as
 # the destination directory for the final binaries. This prefix must not
 # contain spaces, otherwise the build will fail (this is due to the
