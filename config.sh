@@ -14,6 +14,9 @@ if [ ! -z ${XC_TARGET_NAME} ]; then
   if [ "${XC_TARGET_NAME}" == "rpi1" ] || [ "${XC_TARGET_NAME}" == "rpi2" ]; then
     export XC_TARGET="arm-unknown-linux-gnueabihf"
     export XC_KERNEL_TARGET="arm"
+  else
+    echo "Invalid XC_TARGET_NAME: ${XC_TARGET_NAME}"
+    exit 1
   fi
 else
   # XC_TARGET and XC_KERNEL_TARGET must be set
