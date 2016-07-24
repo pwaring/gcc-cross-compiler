@@ -3,20 +3,22 @@
 # If target name is set, set relevant variables as appropriate
 export XC_TARGET_NAME=${XC_TARGET_NAME:-}
 
+# XC_TARGET is the target architecture for the toolchain. Depending on the
+# architecture, you may need all parts of the triplet (e.g. for a Raspberry Pi
+# you should set XC_TARGET to "arm-unknown-linux-gnueabihf").
+
+# XC_KERNEL_TARGET is the kernel target architecture. The kernel has slightly
+# different names for its targets, e.g. for a RPi you shoud set this to "arm"
+
 if [ ! -z ${XC_TARGET_NAME} ]; then
   if [ "${XC_TARGET_NAME}" == "rpi1" ] || [ "${XC_TARGET_NAME}" == "rpi2" ]; then
     export XC_TARGET="arm-unknown-linux-gnueabihf"
     export XC_KERNEL_TARGET="arm"
   fi
 else
-  # Target architecture for the toolchain. Depending on the architecture, you
-  # may need all parts of the triplet (e.g. for a Raspberry Pi you should set
-  # XC_TARGET to "arm-unknown-linux-gnueabihf").
-  export XC_TARGET="mips-linux"
-
-  # Kernel target architecture. The kernel has slightly different names for its
-  # targets, e.g. for a RPi you shoud set this to "arm"
-  export XC_KERNEL_TARGET="mips"
+  # XC_TARGET and XC_KERNEL_TARGET must be set
+  : "${XC_TARGET:?XC_TARGET not set}"
+  : "${XC_KERNEL_TARGET:?XC_KERNEL_TARGET not set}"
 fi
 
 # Parallel build options

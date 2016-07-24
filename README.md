@@ -30,6 +30,13 @@ The build script supports the following environment variables:
  * `XC_TARGET_NAME`: Specify a human-readable target, e.g. `rpi2` for the
  Raspberry Pi 2. This will automatically set the correct cross compiler and
  kernel options.
+ * `XC_TARGET`: The target architecture for the toolchain. Depending on the
+ architecture, you may need all parts of the triplet (e.g. for a Raspberry Pi
+ you should set XC_TARGET to "arm-unknown-linux-gnueabihf"). Required if
+ `XC_TARGET_NAME` is not set.
+ * `XC_KERNEL_TARGET`: Kernel target architecture. The kernel has slightly
+ different names for its targets, e.g. for a RPi you shoud set this to "arm".
+ Required if `XC_TARGET_NAME` is not set.
  * `GCC_VERSION`: Version of GCC to use. This currently defaults to the latest
  5.x series. The cross compiler is more likely to build if you use a version
  close to that on the host (e.g. don't try and build a 5.x cross compiler on a
