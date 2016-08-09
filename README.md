@@ -70,7 +70,7 @@ work better, offer more flexibility etc. include:
  * [crosstool-ng](http://crosstool-ng.org/)
 
 You may also be able to install cross compilers for certain architectures via
-your package management system. For example, on Ubuntu the
+your package management system. For example, on Ubuntu thepwaring
 `gcc-arm-linux-gnueabi` package will provide you with a cross compiler for 32
 bit ARM on a x86 or x86_64 host.
 
@@ -81,3 +81,4 @@ bit ARM on a x86 or x86_64 host.
  * [GCC Cross-Compiler](http://wiki.osdev.org/GCC_Cross-Compiler): Useful bits
  of information aimed at people looking to get involved in operatinh system
  development, particularly embedded systems.
+ * [Windows-to-RaspberryPi (Jessie) Cross Compiler Guide](http://www.gurucoding.com/en/rpi_cross_compiler_jessie/index.php)
