@@ -56,7 +56,7 @@ export GCC_BASE_URL="ftp://gcc.gnu.org/pub/gcc"
 # Version numbers for the relevant components of the toolchain. Not all
 # version combinations have been tested. Unless you need a feature in
 # a later version, do not edit these options.
-export BINUTILS_VERSION="2.26"
+export BINUTILS_VERSION="2.27"
 
 # Kernel headers are required for glibc
 # Generally it is best to choose the latest stable release
