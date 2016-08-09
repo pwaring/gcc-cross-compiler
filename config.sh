@@ -64,7 +64,7 @@ export KERNEL_VERSION_MAJOR="4"
 export KERNEL_VERSION_MINOR="7"
 export KERNEL_VERSION="${KERNEL_VERSION_MAJOR}.${KERNEL_VERSION_MINOR}"
 
-export GLIBC_VERSION="2.23"
+export GLIBC_VERSION="2.24"
 
 # The GCC version number should be in the same minor series as your host
 # compiler. For example, if your host has GCC 4.9.1, you can probably set
