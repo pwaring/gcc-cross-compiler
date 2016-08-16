@@ -79,6 +79,6 @@ bit ARM on a x86 or x86_64 host.
  * [How to Build a GCC Cross-Compiler](http://preshing.com/20141119/how-to-build-a-gcc-cross-compiler/):
  Blog post which was used as the starting point for this project.
  * [GCC Cross-Compiler](http://wiki.osdev.org/GCC_Cross-Compiler): Useful bits
- of information aimed at people looking to get involved in operatinh system
+ of information aimed at people looking to get involved in operating system
  development, particularly embedded systems.
  * [Windows-to-RaspberryPi (Jessie) Cross Compiler Guide](http://www.gurucoding.com/en/rpi_cross_compiler_jessie/index.php)
