@@ -14,6 +14,9 @@ if [ ! -z ${XC_TARGET_NAME} ]; then
   if [ "${XC_TARGET_NAME}" == "rpi1" ] || [ "${XC_TARGET_NAME}" == "rpi2" ]; then
     export XC_TARGET="arm-unknown-linux-gnueabihf"
     export XC_KERNEL_TARGET="arm"
+  elif [ "${XC_TARGET_NAME}" == "rpi3" ]; then
+    export XC_TARGET="arm-linux-gnueabi"
+    export XC_KERNEL_TARGET="arm64"
   else
     echo "Invalid XC_TARGET_NAME: ${XC_TARGET_NAME}"
     exit 1
@@ -127,7 +130,7 @@ export GLIBC_CONFIGURE_OPTIONS=(
 
 GLIBC_CONFIGURE_OPTIONS+=(${GLOBAL_CONFIGURE_OPTIONS[*]})
 
-export GCC_FILENAME="gcc-${GCC_VERSION}.tar.gz"
+export GCC_FILENAME="gcc-${GCC_VERSION}.tar.bz2"
 export GCC_URL="${GNU_BASE_URL}/gcc/gcc-${GCC_VERSION}/${GCC_FILENAME}"
 export GCC_TARBALL="${XC_TARBALL_DIR}/${GCC_FILENAME}"
 export GCC_SRC_DIR="${XC_TMP_DIR}/gcc-${GCC_VERSION}"
