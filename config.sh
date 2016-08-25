@@ -51,7 +51,7 @@ export PATH="${XC_PREFIX}/bin:${PATH}"
 
 # GNU (binutils, GCC + dependencies) and Sourceware (newlib) URLs. You can
 # change these to a local mirror if required.
-export GNU_BASE_URL="http://ftpmirror.gnu.org"
+export GNU_BASE_URL="https://ftpmirror.gnu.org"
 export SOURCEWARE_BASE_URL="ftp://sourceware.org/pub"
 export KERNEL_BASE_URL="https://www.kernel.org/pub/linux/kernel"
 export GCC_BASE_URL="ftp://gcc.gnu.org/pub/gcc"
@@ -94,9 +94,18 @@ export GLOBAL_CONFIGURE_OPTIONS=(
 
 # You should not need to edit any of the following variables unless the build
 # process fails.
+export GNU_GPG_KEYRING_FILENAME="gnu-keyring.gpg"
+export GNU_GPG_KEYRING_URL="${GNU_BASE_URL}/${GNU_GPG_KEYRING_FILENAME}"
+export GNU_GPG_KEYRING_PATH="${XC_TARBALL_DIR}/${GNU_GPG_KEYRING_FILENAME}"
+
 export BINUTILS_FILENAME="binutils-${BINUTILS_VERSION}.tar.bz2"
 export BINUTILS_URL="${GNU_BASE_URL}/binutils/${BINUTILS_FILENAME}"
 export BINUTILS_TARBALL="${XC_TARBALL_DIR}/${BINUTILS_FILENAME}"
+
+export BINUTILS_FILENAME_SIG="${BINUTILS_FILENAME}.sig"
+export BINUTILS_URL_SIG="${BINUTILS_URL}.sig"
+export BINUTILS_TARBALL_SIG="${BINUTILS_TARBALL}.sig"
+
 export BINUTILS_SRC_DIR="${XC_TMP_DIR}/binutils-${BINUTILS_VERSION}"
 export BINUTILS_BUILD_DIR="${XC_TMP_DIR}/build-binutils"
 export BINUTILS_CONFIGURE_OPTIONS=(

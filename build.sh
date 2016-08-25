@@ -36,7 +36,12 @@ if [ ! -d ${XC_TMP_DIR} ]; then
   mkdir -p ${XC_TMP_DIR}
 fi
 
-# Download all tarballs
+# Download GPG keyring
+if [ ! -f ${GNU_GPG_KEYRING_PATH} ]; then
+  wget ${GNU_GPG_KEYRING_URL} -O ${GNU_GPG_KEYRING_PATH}
+fi
+
+# Download all tarballs and signatures
 if [ ! -x ${FULL_REBUILD} ]; then
   # Binutils
   if [ ! -f ${BINUTILS_TARBALL} ]; then
@@ -87,6 +92,12 @@ fi
 # Extract all tarballs
 if [ ! -z ${FULL_REBUILD} ]; then
   # Binutils
+  if [ ! -f ${BINUTILS_TARBALL_SIG} ]; then
+    wget ${BINUTILS_URL_SIG} -O ${BINUTILS_TARBALL_SIG}
+  fi
+
+  gpg --quiet --verify --keyring ${GNU_GPG_KEYRING_PATH} ${BINUTILS_TARBALL_SIG} ${BINUTILS_TARBALL}
+
   if [ -d ${BINUTILS_SRC_DIR} ]; then
     rm -rf ${BINUTILS_SRC_DIR}
   fi
