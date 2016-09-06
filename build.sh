@@ -112,6 +112,12 @@ if [ ! -z ${FULL_REBUILD} ]; then
   tar -xvf ${KERNEL_TARBALL} -C ${XC_TMP_DIR}
 
   # glibc
+  if [ ! -f ${GLIBC_TARBALL_SIG} ]; then
+    wget ${GLIBC_URL_SIG} -O ${GLIBC_TARBALL_SIG}
+  fi
+
+  gpg --quiet --verify --keyring ${GNU_GPG_KEYRING_PATH} ${GLIBC_TARBALL_SIG} ${GLIBC_TARBALL}
+
   if [ -d ${GLIBC_SRC_DIR} ]; then
     rm -rf ${GLIBC_SRC_DIR}
   fi
