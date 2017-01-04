@@ -79,7 +79,7 @@ export GCC_LANGS="c,c++"
 export MPFR_VERSION="3.1.5"
 export MPC_VERSION="1.0.3"
 
-export GMP_VERSION="6.1.1"
+export GMP_VERSION="6.1.2"
 export GMP_VERSION_MINOR=""
 
 export ISL_VERSION="0.16.1"
