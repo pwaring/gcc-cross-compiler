@@ -1,0 +1,1 @@
+FULL_REBUILD=1 PARALLEL_BUILDS=2 XC_TARGET=mips-linux XC_KERNEL_TARGET=mips bash ./build.sh
