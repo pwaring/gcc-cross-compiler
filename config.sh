@@ -64,7 +64,7 @@ export BINUTILS_VERSION="2.28"
 # Kernel headers are required for glibc
 # Generally it is best to choose the latest stable release
 export KERNEL_VERSION_MAJOR="4"
-export KERNEL_VERSION_MINOR="9.9"
+export KERNEL_VERSION_MINOR="11.2"
 export KERNEL_VERSION="${KERNEL_VERSION_MAJOR}.${KERNEL_VERSION_MINOR}"
 
 export GLIBC_VERSION="2.25"
