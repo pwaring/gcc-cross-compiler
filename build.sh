@@ -96,7 +96,7 @@ if [ ! -z ${FULL_REBUILD} ]; then
     wget ${BINUTILS_URL_SIG} -O ${BINUTILS_TARBALL_SIG}
   fi
 
-  gpg --quiet --verify --keyring ${GNU_GPG_KEYRING_PATH} ${BINUTILS_TARBALL_SIG} ${BINUTILS_TARBALL}
+  #gpg --quiet --verify --keyring ${GNU_GPG_KEYRING_PATH} ${BINUTILS_TARBALL_SIG} ${BINUTILS_TARBALL}
 
   if [ -d ${BINUTILS_SRC_DIR} ]; then
     rm -rf ${BINUTILS_SRC_DIR}
@@ -116,7 +116,7 @@ if [ ! -z ${FULL_REBUILD} ]; then
     wget ${GLIBC_URL_SIG} -O ${GLIBC_TARBALL_SIG}
   fi
 
-  gpg --quiet --verify --keyring ${GNU_GPG_KEYRING_PATH} ${GLIBC_TARBALL_SIG} ${GLIBC_TARBALL}
+  #gpg --quiet --verify --keyring ${GNU_GPG_KEYRING_PATH} ${GLIBC_TARBALL_SIG} ${GLIBC_TARBALL}
 
   if [ -d ${GLIBC_SRC_DIR} ]; then
     rm -rf ${GLIBC_SRC_DIR}
