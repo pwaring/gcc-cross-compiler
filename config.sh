@@ -76,7 +76,7 @@ export GLIBC_VERSION="2.26"
 export GCC_VERSION=${GCC_VERSION:-"5.4.0"}
 export GCC_LANGS="c,c++"
 
-export MPFR_VERSION="3.1.5"
+export MPFR_VERSION="3.1.6"
 export MPC_VERSION="1.0.3"
 
 export GMP_VERSION="6.1.2"
