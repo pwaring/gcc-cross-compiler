@@ -59,30 +59,30 @@ export GCC_BASE_URL="ftp://gcc.gnu.org/pub/gcc"
 # Version numbers for the relevant components of the toolchain. Not all
 # version combinations have been tested. Unless you need a feature in
 # a later version, do not edit these options.
-export BINUTILS_VERSION="2.29.1"
+export BINUTILS_VERSION="2.34"
 
 # Kernel headers are required for glibc
 # Generally it is best to choose the latest stable release
-export KERNEL_VERSION_MAJOR="4"
-export KERNEL_VERSION_MINOR="14.3"
+export KERNEL_VERSION_MAJOR="5"
+export KERNEL_VERSION_MINOR="7.9"
 export KERNEL_VERSION="${KERNEL_VERSION_MAJOR}.${KERNEL_VERSION_MINOR}"
 
-export GLIBC_VERSION="2.26"
+export GLIBC_VERSION="2.31"
 
 # The GCC version number should be in the same minor series as your host
 # compiler. For example, if your host has GCC 4.9.1, you can probably set
 # GCC_VERSION to the latest version of the 4.9.x series, but you should not
 # set it to 5.x.
-export GCC_VERSION=${GCC_VERSION:-"5.4.0"}
+export GCC_VERSION=${GCC_VERSION:-"9.3.0"}
 export GCC_LANGS="c,c++"
 
-export MPFR_VERSION="3.1.6"
+export MPFR_VERSION="4.1.0"
 export MPC_VERSION="1.0.3"
 
-export GMP_VERSION="6.1.2"
+export GMP_VERSION="6.2.0"
 export GMP_VERSION_MINOR=""
 
-export ISL_VERSION="0.16.1"
+export ISL_VERSION="0.18"
 export CLOOG_VERSION="0.18.1"
 
 export GLOBAL_CONFIGURE_OPTIONS=(
